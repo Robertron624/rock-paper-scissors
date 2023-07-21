@@ -1,12 +1,15 @@
 import './App.css'
+import Header from './components/Header'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-7xl text-rock-start'>
-        Hello World
-      </h1>
+      <Header />
+
+      <button className='mt-10 rounded-md px-8 py-1 text-white border-2 border-white'>
+        RULES
+      </button>
     </>
   )
 }

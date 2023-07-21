@@ -10,6 +10,7 @@ export default {
       dark: 'hsl(229, 25%, 31%)',
       score : 'hsl(229, 64%, 46%)',
       outline: 'hsl(217, 16%, 45%)',
+      white: 'hsl(0, 0%, 100%)',
 
       // shape colors
       'scissors-start': 'hsl(39, 89%, 49%)',
