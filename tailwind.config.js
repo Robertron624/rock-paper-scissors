@@ -17,14 +17,19 @@ export default {
       'scissors-end': 'hsl(40, 84%, 53%)',
       'paper-start': 'hsl(230, 89%, 62%)',
       'paper-end': 'hsl(230, 89%, 65%)',
-      'rock-start': 'hsl(349, 71%, 52%)',
-      'rock-end': 'hsl(349, 70%, 56%)',
+      'rock-start': 'hsl(349, 70%, 56%)',
+      'rock-end': 'hsl(349, 71%, 52%)',
       'lizard-start': 'hsl(261, 73%, 60%)',
       'lizard-end': 'hsl(261, 72%, 63%)',
       'cyan-start': 'hsl(189, 59%, 53%)',
       'cyan-end': 'hsl(189, 58%, 57%)',
+      'option-background': 'hsl(270, 3%, 87%)',
     },
     extend: {
+      backgroundImage: {
+        'triangle': 'url("/bg-triangle.svg")',
+        'pentagon': 'url("/bg-pentagon.svg")',
+      },
       fontFamily: {
         barlowSemiCondensed: ["Barlow Semi Condensed", "sans-serif"],
     },
