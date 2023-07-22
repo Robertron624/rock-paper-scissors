@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Rock, Scissors, Paper } from "./options/Options";
 import { useGameStore } from "../store";
+import { GameStep, GameChoice } from "../store";
 const ThirdStep = () => {
 
     const playerChoice = useGameStore((state) => state.playerChoice);
@@ -17,9 +18,9 @@ const ThirdStep = () => {
     const setComputerChoice = useGameStore((state) => state.setComputerChoice);
 
     const handlePlayAgain = () => {
-        setCurrentGameStep('user-pick');
-        setPlayerChoice('');
-        setComputerChoice('');
+        setCurrentGameStep(GameStep.UserPick);
+        setPlayerChoice(GameChoice.null);
+        setComputerChoice(GameChoice.null);
     };
 
     useEffect(() => {

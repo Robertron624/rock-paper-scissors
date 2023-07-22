@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Scissors, Paper ,Rock, Placeholder } from "./options/Options"
 import { useGameStore } from "../store"
+import { GameStep, GameChoice } from "../store"
+
 
 const SecondStep = () => {
 
@@ -19,8 +21,8 @@ const SecondStep = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       const computerChoice = computerPick();
-      setComputerChoice(computerChoice);
-      setCurrentGameStep('game-over');
+      setComputerChoice(computerChoice as GameChoice);
+      setCurrentGameStep(GameStep.GameOver);
     }, 3000);
     return () => clearTimeout(timer);
   }, [setComputerChoice, setCurrentGameStep]);

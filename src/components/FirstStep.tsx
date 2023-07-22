@@ -1,5 +1,6 @@
 import { Rock, Paper, Scissors } from "./options/Options";
 import { useGameStore } from "../store";
+import { GameStep, GameChoice } from "../store";
 
 const FirstStep = () => {
     const setPlayerChoice = useGameStore((state) => state.setPlayerChoice);
@@ -8,8 +9,8 @@ const FirstStep = () => {
 
     const handlePlayerChoice = (e: React.MouseEvent<HTMLElement>) => {
         const choice = e.currentTarget.id;
-        setPlayerChoice(choice);
-        setCurrentGameStep('computer-thinking');
+        setPlayerChoice(choice as GameChoice);
+        setCurrentGameStep(GameStep.ComputerThinking);
     };
 
     return (
