@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Rock, Scissors, Paper } from "./options/Options";
 import { useGameStore } from "../store";
 const ThirdStep = () => {
@@ -8,26 +9,6 @@ const ThirdStep = () => {
     const winner = useGameStore((state) => state.winner);
     const setWinner = useGameStore((state) => state.setWinner);
     const setPlayerScore = useGameStore((state) => state.setPlayerScore);
-    const defineWinner = () => {
-        if (playerChoice === 'rock' && computerChoice === 'scissors') {
-            setWinner('player');
-            setPlayerScore(1);
-        } else if (playerChoice === 'paper' && computerChoice === 'rock') {
-            setWinner('player');
-            setPlayerScore(1);
-        } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
-            setWinner('player');
-            setPlayerScore(1);
-        } else if (playerChoice === 'rock' && computerChoice === 'paper') {
-            setWinner('computer');
-        } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
-            setWinner('computer');
-        } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
-            setWinner('computer');
-        } else {
-            setWinner('draw');
-        }
-    };
 
     // functions to play again
 
@@ -40,9 +21,33 @@ const ThirdStep = () => {
         setPlayerChoice('');
         setComputerChoice('');
     };
-    
 
-    defineWinner();
+    useEffect(() => {
+
+        const defineWinner = () => {
+            if (playerChoice === 'rock' && computerChoice === 'scissors') {
+                setWinner('player');
+                setPlayerScore(1);
+            } else if (playerChoice === 'paper' && computerChoice === 'rock') {
+                setWinner('player');
+                setPlayerScore(1);
+            } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
+                setWinner('player');
+                setPlayerScore(1);
+            } else if (playerChoice === 'rock' && computerChoice === 'paper') {
+                setWinner('computer');
+            } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
+                setWinner('computer');
+            } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
+                setWinner('computer');
+            } else {
+                setWinner('draw');
+            }
+        };
+        defineWinner();
+    }
+    
+    , [computerChoice, playerChoice, setPlayerScore, setWinner]);
 
     
 
