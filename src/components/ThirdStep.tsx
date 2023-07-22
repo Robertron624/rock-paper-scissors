@@ -8,7 +8,7 @@ const ThirdStep = () => {
 
     const winner = useGameStore((state) => state.winner);
     const setWinner = useGameStore((state) => state.setWinner);
-    const setPlayerScore = useGameStore((state) => state.setPlayerScore);
+    const increasePlayerScore = useGameStore((state) => state.increasePlayerScore);
 
     // functions to play again
 
@@ -25,29 +25,43 @@ const ThirdStep = () => {
     useEffect(() => {
 
         const defineWinner = () => {
+
             if (playerChoice === 'rock' && computerChoice === 'scissors') {
                 setWinner('player');
-                setPlayerScore(1);
-            } else if (playerChoice === 'paper' && computerChoice === 'rock') {
+                increasePlayerScore();
+            }
+
+            if (playerChoice === 'rock' && computerChoice === 'paper') {
+                setWinner('computer');
+            }
+
+            if (playerChoice === 'paper' && computerChoice === 'rock') {
                 setWinner('player');
-                setPlayerScore(1);
-            } else if (playerChoice === 'scissors' && computerChoice === 'paper') {
+                increasePlayerScore();
+            }
+
+            if (playerChoice === 'paper' && computerChoice === 'scissors') {
+                setWinner('computer');
+            }
+
+            if (playerChoice === 'scissors' && computerChoice === 'paper') {
                 setWinner('player');
-                setPlayerScore(1);
-            } else if (playerChoice === 'rock' && computerChoice === 'paper') {
+                increasePlayerScore();
+            }
+
+            if (playerChoice === 'scissors' && computerChoice === 'rock') {
                 setWinner('computer');
-            } else if (playerChoice === 'paper' && computerChoice === 'scissors') {
-                setWinner('computer');
-            } else if (playerChoice === 'scissors' && computerChoice === 'rock') {
-                setWinner('computer');
-            } else {
+            }
+
+            if (playerChoice === computerChoice) {
                 setWinner('draw');
             }
+
         };
         defineWinner();
     }
     
-    , [computerChoice, playerChoice, setPlayerScore, setWinner]);
+    , [computerChoice, playerChoice, setWinner, increasePlayerScore]);
 
     
 
