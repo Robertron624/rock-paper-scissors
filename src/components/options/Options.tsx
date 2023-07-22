@@ -1,4 +1,6 @@
+
 export const Rock = () => {
+
     return (
         <div className="option mx-auto bg-gradient-to-b from-rock-start to-rock-end w-28 h-28 rounded-full flex justify-center items-center">
             <div className="bg-option-background rounded-full w-24 h-24 flex justify-center items-center">
@@ -9,6 +11,7 @@ export const Rock = () => {
 };
 
 export const Paper = () => {
+
     return (
         <div className="option bg-option-background w-28 h-28 rounded-full flex justify-center items-center bg-gradient-to-b from-paper-start to-paper-end">
             <div className="bg-option-background rounded-full w-24 h-24 flex justify-center items-center">
@@ -18,6 +21,7 @@ export const Paper = () => {
     );
 };
 export const Scissors = () => {
+
     return (
         <div className="option bg-option-background w-28 h-28 rounded-full flex justify-center items-center bg-gradient-to-b from-scissors-start to-scissors-end ">
             <div className="bg-option-background rounded-full w-24 h-24 flex justify-center items-center">

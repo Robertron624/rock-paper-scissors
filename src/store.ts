@@ -1,14 +1,14 @@
-import { createStore } from "zustand";
+import { create } from "zustand";
 
 export interface GameState {
-    currentGameState: "user-pick" | "computer-pick" | "game-over";
+    currentGameStep: "user-pick" | "computer-thinking" | "game-over";
     playerScore: number;
     computerScore: number;
     playerChoice: string;
     computerChoice: string;
     winner: string;
-    setcurrentGameState: (
-        state: "user-pick" | "computer-pick" | "game-over"
+    setCurrentGameStep: (
+        state: "user-pick" | "computer-thinking" | "game-over"
     ) => void;
     setPlayerScore: (score: number) => void;
     setComputerScore: (score: number) => void;
@@ -18,14 +18,14 @@ export interface GameState {
 }
 
 // Create a store for storing the rock paper scissors game state
-export const useGameStore = createStore<GameState>((set) => ({
-    currentGameState: "user-pick",
+export const useGameStore = create<GameState>((set) => ({
+    currentGameStep: "user-pick",
     playerScore: 0,
     computerScore: 0,
     playerChoice: "",
     computerChoice: "",
     winner: "",
-    setcurrentGameState: (state) => set({ currentGameState: state }),
+    setCurrentGameStep: (state) => set({ currentGameStep: state }),
     setPlayerScore: (score) => set({ playerScore: score }),
     setComputerScore: (score) => set({ computerScore: score }),
     setPlayerChoice: (choice) => set({ playerChoice: choice }),
