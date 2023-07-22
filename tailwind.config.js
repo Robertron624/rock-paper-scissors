@@ -24,6 +24,7 @@ export default {
       'cyan-start': 'hsl(189, 59%, 53%)',
       'cyan-end': 'hsl(189, 58%, 57%)',
       'option-background': 'hsl(270, 3%, 87%)',
+      'placeholder': 'hsl(237, 49%, 15%)',
     },
     extend: {
       backgroundImage: {
