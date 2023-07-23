@@ -24,6 +24,7 @@ export interface GameState {
         state: GameStep
     ) => void;
     increasePlayerScore: () => void;
+    setPlayerScore: (score: number) => void;
     increaseComputerScore: () => void;
     setPlayerChoice: (choice: GameChoice) => void;
     setComputerChoice: (choice: GameChoice) => void;
@@ -40,6 +41,7 @@ export const useGameStore = create<GameState>((set) => ({
     winner: "",
     setCurrentGameStep: (state) => set({ currentGameStep: state }),
     increasePlayerScore: () => set((state) => ({ playerScore: state.playerScore + 1 })),
+    setPlayerScore: (score: number) => set({ playerScore: score }),
     increaseComputerScore: () => set((state) => ({ computerScore: state.computerScore + 1 })),
     setPlayerChoice: (choice:GameChoice) => set({ playerChoice: choice }),
     setComputerChoice: (choice:GameChoice) => set({ computerChoice: choice }),

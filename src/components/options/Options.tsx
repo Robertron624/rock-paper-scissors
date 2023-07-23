@@ -33,7 +33,9 @@ export const Scissors = () => {
 
 export const Placeholder = () => {
     return (
-        <div className="animate-pulse option bg-placeholder w-24 h-24 rounded-full flex justify-center items-center ml-auto">
+        <div className="w-28 h-28 rounded-full flex items-center">
+            <div className="animate-pulse option bg-placeholder w-24 h-24 rounded-full flex justify-center items-center ml-auto">
+            </div>
         </div>
     );
 }
