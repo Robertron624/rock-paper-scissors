@@ -43,25 +43,30 @@ function App() {
     return (
         <>
             <Header />
-            <div className="playground my-28">
-                
-                {currentGameStep === 'user-pick' && <FirstStep />}
+            <main className="mt-28">
+                <h1 className="sr-only">
+                    Rock Paper Scissors
+                </h1>
+                <div className="playground mb-28">
+                    
+                    {currentGameStep === 'user-pick' && <FirstStep />}
 
-                {currentGameStep === 'computer-thinking' && <SecondStep />}
+                    {currentGameStep === 'computer-thinking' && <SecondStep />}
 
-                {currentGameStep === 'game-over' && <ThirdStep />}
+                    {currentGameStep === 'game-over' && <ThirdStep />}
 
-            </div>
-            <button
-                onClick={handleRulesModal}
-                className="rounded-md px-8 py-1 text-white border-2 border-white"
-            >
-                RULES
-            </button>
-            <RulesModal
-                isRulesModalOpen={isRulesModalOpen}
-                setIsRulesModalOpen={setIsRulesModalOpen}
-            />
+                </div>
+                <button
+                    onClick={handleRulesModal}
+                    className="rounded-md px-8 py-1 text-white border-2 border-white"
+                >
+                    RULES
+                </button>
+                <RulesModal
+                    isRulesModalOpen={isRulesModalOpen}
+                    setIsRulesModalOpen={setIsRulesModalOpen}
+                />
+            </main>
         </>
     );
 }

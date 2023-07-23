@@ -28,7 +28,7 @@ const SecondStep = () => {
   }, [setComputerChoice, setCurrentGameStep]);
 
   return (
-    <div>
+    <>
         <div className="choices h-40 flex justify-between text-white text-sm">
           <div className="user flex flex-col justify-between">
             
@@ -49,7 +49,7 @@ const SecondStep = () => {
             </h3>
           </div>
         </div>
-    </div>
+    </>
   )
 }
 

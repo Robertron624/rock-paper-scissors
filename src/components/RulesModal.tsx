@@ -19,6 +19,9 @@ const RulesModal = ({
                     <img src="/image-rules.svg" alt="rules" />
                 </div>
                 <button className="mt-28" onClick={handleRulesModal}>
+                    <span className="sr-only">
+                        close
+                    </span>
                     <img src="/icon-close.svg" alt="close" />
                 </button>
             </div>
