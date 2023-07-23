@@ -58,7 +58,7 @@ function App() {
                 </div>
                 <button
                     onClick={handleRulesModal}
-                    className="rounded-md px-8 py-1 text-white border-2 border-white"
+                    className="md:float-right rounded-md px-8 py-1 text-white border-2 border-white"
                 >
                     RULES
                 </button>

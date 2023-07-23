@@ -23,13 +23,13 @@ const SecondStep = () => {
       const computerChoice = computerPick();
       setComputerChoice(computerChoice as GameChoice);
       setCurrentGameStep(GameStep.GameOver);
-    }, 3000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, [setComputerChoice, setCurrentGameStep]);
 
   return (
     <>
-        <div className="choices h-40 flex justify-between text-white text-sm">
+        <div className="choices md:h-56 md:max-w-sm mx-auto h-40 flex justify-between text-white text-sm">
           <div className="user flex flex-col justify-between">
             
             {playerChoice === 'rock' && <Rock />}

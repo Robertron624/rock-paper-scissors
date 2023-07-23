@@ -16,7 +16,7 @@ const FirstStep = () => {
     };
 
     return (
-        <div className="options flex flex-col bg-triangle bg-no-repeat bg-center bg-[length:15rem_12rem]">
+        <div className="md:max-w-sm md:gap-12 options mx-auto flex flex-col bg-triangle bg-no-repeat bg-center bg-[length:15rem_12rem] md:bg-[length:22rem_14rem]">
             <div className="flex justify-between">
                 <button onClick={handlePlayerChoice} id="paper">
                     <span className="sr-only">paper</span>
