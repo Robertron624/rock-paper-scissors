@@ -48,7 +48,10 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- [TypeScript](https://www.typescriptlang.org/) - For type checking
+- [Zustand](https://zustand.surge.sh/) - For state management
 - [TailwindCSS](https://tailwindcss.com/) - For styles
+- [DaisyUI](https://daisyui.com/) - For UI components(modal)
 - [Vite](https://vitejs.dev/) - For bundling
 
 ### What I learned

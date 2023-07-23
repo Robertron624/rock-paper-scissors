@@ -64,11 +64,9 @@ const ThirdStep = () => {
     
     , [computerChoice, playerChoice, setWinner, increasePlayerScore]);
 
-    
-
     return (
         <div>
-            <div className="choices flex justify-between text-white">
+            <div className="choices h-40 flex justify-between text-white">
                 <div className="user flex flex-col justify-between">
                     
                     {playerChoice === 'rock' && <Rock />}
