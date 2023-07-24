@@ -13,7 +13,7 @@ const SecondStep = () => {
 
   // function to make the computer pick between the three options
   const computerPick = ():GameChoice => {
-    const options = ['rock', 'paper', 'scissors'];
+    const options = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     const random = Math.floor(Math.random() * options.length);
     return options[random] as GameChoice;
   }

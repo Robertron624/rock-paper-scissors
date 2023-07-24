@@ -13,38 +13,31 @@ export const useDefineWinner = ():string => {
     );
 
     useEffect(() => {
-        const defineWinner = () => {
-            if (playerChoice === "rock" && computerChoice === "scissors") {
-                setWinner(GameWinner.Player);
-                increasePlayerScore();
-            }
-
-            if (playerChoice === "rock" && computerChoice === "paper") {
-                setWinner(GameWinner.Computer);
-            }
-
-            if (playerChoice === "paper" && computerChoice === "rock") {
-                setWinner(GameWinner.Player);
-                increasePlayerScore();
-            }
-
-            if (playerChoice === "paper" && computerChoice === "scissors") {
-                setWinner(GameWinner.Computer);
-            }
-
-            if (playerChoice === "scissors" && computerChoice === "paper") {
-                setWinner(GameWinner.Player);
-                increasePlayerScore();
-            }
-
-            if (playerChoice === "scissors" && computerChoice === "rock") {
-                setWinner(GameWinner.Computer);
-            }
-
+        // Function de define the winner taking into account spock and lizard
+        
+        const defineWinner = ():void => {
             if (playerChoice === computerChoice) {
                 setWinner(GameWinner.Draw);
+            } else if ( 
+                (playerChoice === "rock" && computerChoice === "scissors") ||
+                (playerChoice === "rock" && computerChoice === "lizard") ||
+                (playerChoice === "paper" && computerChoice === "rock") ||
+                (playerChoice === "paper" && computerChoice === "spock") ||
+                (playerChoice === "scissors" && computerChoice === "paper") ||
+                (playerChoice === "scissors" && computerChoice === "lizard") ||
+                (playerChoice === "lizard" && computerChoice === "paper") ||
+                (playerChoice === "lizard" && computerChoice === "spock") ||
+                (playerChoice === "spock" && computerChoice === "rock") ||
+                (playerChoice === "spock" && computerChoice === "scissors")
+            ) {
+                setWinner(GameWinner.Player);
+                increasePlayerScore();
+            }
+            else {
+                setWinner(GameWinner.Computer);
             }
         };
+
         defineWinner();
     }, [computerChoice, playerChoice, setWinner, increasePlayerScore]);
 

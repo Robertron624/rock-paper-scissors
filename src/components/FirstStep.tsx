@@ -16,7 +16,7 @@ const FirstStep = () => {
     };
 
     return (
-        <div className="md:max-w-sm md:gap-12 options mx-auto flex flex-col gap-8 bg-pentagon bg-no-repeat bg-center bg-[length:15rem_16rem] md:bg-[length:22rem_14rem]">
+        <div className="md:max-w-md md:gap-12 options mx-auto flex flex-col gap-8 bg-pentagon bg-no-repeat bg-center bg-[length:15rem_16rem] md:bg-[length:22rem_22rem]">
             <div>
                 <button
                     className="hover:scale-110 transition-all"

@@ -1,4 +1,4 @@
-import { Rock, Paper, Scissors } from "./components/options/Options";
+import { Rock, Paper, Scissors, Lizard, Spock } from "./components/options/Options";
 import { GameChoice } from "./store";
 
 export const returnOption = (choice: GameChoice): JSX.Element => {
@@ -9,6 +9,10 @@ export const returnOption = (choice: GameChoice): JSX.Element => {
         return <Paper />;
         case "scissors":
         return <Scissors />;
+        case "lizard":
+        return <Lizard />;
+        case "spock":
+        return <Spock />;
         default:
         return <></>;
     }

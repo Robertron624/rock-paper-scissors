@@ -10,6 +10,8 @@ export enum GameChoice {
     Rock = "rock",
     Paper = "paper",
     Scissors = "scissors",
+    Lizard = "lizard",
+    Spock = "spock",
     null = "",
 }
 

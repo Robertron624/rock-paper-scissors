@@ -41,7 +41,7 @@ const RulesModal = ({
 
     return (
         <dialog open={isRulesModalOpen} className="modal backdrop-brightness-50">
-            <div className="modal-box overflow-y-hidden max-w-none max-h-none h-full w-full bg-white py-14 md:py-6 md:max-w-md md:max-h-[27rem] rounded-md">
+            <div className="modal-box overflow-y-hidden max-w-none max-h-none h-full w-full bg-white py-14 md:py-6 md:max-w-md md:max-h-[32rem] rounded-md">
                 <div className="mb-20 md:flex md:justify-between justify-center w-full md:max-w-[90%] md:mx-auto">
                 <h2 className="text-3xl font-bold text-dark">RULES</h2>
                 <button className="hidden md:block" onClick={handleRulesModal}>
