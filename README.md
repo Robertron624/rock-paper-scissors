@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repo](https://github.com/Robertron624/rock-paper-scissors)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify live site](https://melodic-zabaione-4cfebe.netlify.app/)
 
 ## My process
 
