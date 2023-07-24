@@ -52,7 +52,7 @@ const RulesModal = ({
                 </button>
                 </div>
                 <div className="modal-body flex justify-center">
-                    <img src="/image-rules.svg" alt="rules" />
+                    <img src="/image-rules-bonus.svg" alt="rules" />
                 </div>
                 <button className="mt-28 md:hidden" onClick={handleRulesModal}>
                     <span className="sr-only">

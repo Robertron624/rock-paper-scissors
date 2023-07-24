@@ -31,6 +31,26 @@ export const Scissors = () => {
     );
 };
 
+export const Lizard = () => {
+        return (
+            <div className={`option bg-option-background md:w-40 md:h-40 w-28 h-28 rounded-full flex justify-center items-center bg-gradient-to-b from-lizard-start to-lizard-end `}>
+                <div className={` shadow-inner shadow-dark bg-option-background rounded-full w-24 h-24 md:w-32 md:h-32 flex justify-center items-center`}>
+                    <img src="icon-lizard.svg" alt="lizard" />
+                </div>
+            </div>
+        );
+    }
+
+export const Spock = () => {
+        return (
+            <div className={`option bg-option-background md:w-40 md:h-40 w-28 h-28 rounded-full flex justify-center items-center bg-gradient-to-b from-spock-start to-spock-end `}>
+                <div className={` shadow-inner shadow-dark bg-option-background rounded-full w-24 h-24 md:w-32 md:h-32 flex justify-center items-center`}>
+                    <img src="icon-spock.svg" alt="spock" />
+                </div>
+            </div>
+        );
+    }
+
 export const Placeholder = () => {
     return (
         <div className="w-28 h-28 md:w-40 md:h-40 rounded-full flex items-center">
