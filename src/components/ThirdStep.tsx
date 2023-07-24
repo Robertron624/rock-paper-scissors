@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import { Rock, Scissors, Paper } from "./options/Options";
 import { useGameStore } from "../store";
 import { GameStep, GameChoice } from "../store";
+import { returnOption } from "../utils";
+
 const ThirdStep = () => {
 
     const playerChoice = useGameStore((state) => state.playerChoice);
@@ -12,7 +13,6 @@ const ThirdStep = () => {
     const increasePlayerScore = useGameStore((state) => state.increasePlayerScore);
 
     // functions to play again
-
     const setCurrentGameStep = useGameStore((state) => state.setCurrentGameStep);
     const setPlayerChoice = useGameStore((state) => state.setPlayerChoice);
     const setComputerChoice = useGameStore((state) => state.setComputerChoice);
@@ -69,11 +69,7 @@ const ThirdStep = () => {
             <div className="choices md:max-w-2xl md:h-56 mx-auto h-40 flex justify-between text-white">
                 <div className="user md:flex-col-reverse flex flex-col justify-between ">
                     
-                    {playerChoice === 'rock' && <Rock />}
-
-                    {playerChoice === 'paper' && <Paper/>}
-
-                    {playerChoice === 'scissors' && <Scissors/>}
+                    {returnOption(playerChoice)}
 
                     <h3 className="font-semibold">YOU PICKED</h3>
                 </div>
@@ -91,11 +87,7 @@ const ThirdStep = () => {
             </div>
                 <div className="house md:items-center md:flex-col-reverse flex flex-col justify-between items-end">
                     
-                    {computerChoice === 'rock' && <Rock/>}
-
-                    {computerChoice === 'paper' && <Paper/>}
-
-                    {computerChoice === 'scissors' && <Scissors/>}
+                    {returnOption(computerChoice)}
 
                     <h3 className="font-semibold">THE HOUSE PICKED</h3>
                 </div>

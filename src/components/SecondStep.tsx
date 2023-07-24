@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import { Scissors, Paper ,Rock, Placeholder } from "./options/Options"
+import { Placeholder } from "./options/Options"
 import { useGameStore } from "../store"
 import { GameStep, GameChoice } from "../store"
+import { returnOption } from "../utils";
 
 
 const SecondStep = () => {
@@ -32,11 +33,7 @@ const SecondStep = () => {
         <div className="choices md:h-56 md:max-w-sm mx-auto h-40 flex justify-between text-white text-sm">
           <div className="user flex flex-col justify-between">
             
-            {playerChoice === 'rock' && <Rock />}
-
-            {playerChoice === 'paper' && <Paper />}
-
-            {playerChoice === 'scissors' && <Scissors />}
+            {returnOption(playerChoice)}
 
             <h3 className="font-semibold">
                 YOU PICKED
