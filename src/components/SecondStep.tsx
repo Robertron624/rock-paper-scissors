@@ -12,17 +12,17 @@ const SecondStep = () => {
   const setCurrentGameStep = useGameStore((state) => state.setCurrentGameStep);
 
   // function to make the computer pick between the three options
-  const computerPick = () => {
+  const computerPick = ():GameChoice => {
     const options = ['rock', 'paper', 'scissors'];
     const random = Math.floor(Math.random() * options.length);
-    return options[random];
+    return options[random] as GameChoice;
   }
   
   // Wait 3 seconds before the computer makes a choice
   useEffect(() => {
     const timer = setTimeout(() => {
-      const computerChoice = computerPick();
-      setComputerChoice(computerChoice as GameChoice);
+      const computerChoice:GameChoice = computerPick();
+      setComputerChoice(computerChoice);
       setCurrentGameStep(GameStep.GameOver);
     }, 2000);
     return () => clearTimeout(timer);

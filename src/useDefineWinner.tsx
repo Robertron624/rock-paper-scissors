@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useGameStore } from "./store";
 
 // This hook defines the winner of the game, updates the score and returns the winner as a string
-export const useDefineWinner = () => {
+export const useDefineWinner = ():string => {
     const playerChoice = useGameStore((state) => state.playerChoice);
     const computerChoice = useGameStore((state) => state.computerChoice);
 

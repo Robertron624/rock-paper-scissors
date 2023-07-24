@@ -9,7 +9,7 @@ const FirstStep = () => {
         (state) => state.setCurrentGameStep
     );
 
-    const handlePlayerChoice = (e: React.MouseEvent<HTMLElement>) => {
+    const handlePlayerChoice = (e: React.MouseEvent<HTMLElement>):void => {
         const choice = e.currentTarget.id;
         setPlayerChoice(choice as GameChoice);
         setCurrentGameStep(GameStep.ComputerThinking);

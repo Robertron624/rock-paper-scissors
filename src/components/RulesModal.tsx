@@ -9,14 +9,14 @@ const RulesModal = ({
     isRulesModalOpen,
     setIsRulesModalOpen,
 }: RulesModalProps) => {
-    const handleRulesModal = () => {
+    const handleRulesModal = ():void => {
         setIsRulesModalOpen(!isRulesModalOpen);
     };
 
     
     useEffect(() => {
         // Close the modal when the user presses the escape key
-        const handleEscape = (e: KeyboardEvent) => {
+        const handleEscape = (e: KeyboardEvent):void => {
             if (e.key === "Escape") {
                 setIsRulesModalOpen(false);
             }
@@ -24,7 +24,7 @@ const RulesModal = ({
         window.addEventListener("keydown", handleEscape);
 
         // Close the modal when the user clicks outside of it
-        const handleClickOutside = (e: MouseEvent) => {
+        const handleClickOutside = (e: MouseEvent):void => {
             const target = e.target as HTMLElement;
             if (target?.classList?.contains("modal")) {
                 setIsRulesModalOpen(false);

@@ -21,7 +21,7 @@ const ThirdStep = () => {
     };
 
     // use the useDefineWinner hook to define the winner
-    const winner = useDefineWinner();
+    const winner:string = useDefineWinner();
 
     return (
         <div>
