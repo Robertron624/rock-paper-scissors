@@ -10,7 +10,7 @@ import { useGameStore } from "./store";
 function App() {
     const [isRulesModalOpen, setIsRulesModalOpen] = useState<boolean>(false);
 
-    const handleRulesModal = () => {
+    const handleRulesModal = ():void => {
         setIsRulesModalOpen(!isRulesModalOpen);
     };
 
@@ -34,7 +34,7 @@ function App() {
     }, [playerScore]);
 
     useEffect(() => {
-        const playerScoreFromLocalStorage = localStorage.getItem('playerScore');
+        const playerScoreFromLocalStorage:string | null = localStorage.getItem('playerScore');
         if (playerScoreFromLocalStorage) {
             setPlayerScore(JSON.parse(playerScoreFromLocalStorage));
         }

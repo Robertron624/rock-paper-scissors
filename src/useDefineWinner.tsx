@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useGameStore } from "./store";
+import { useGameStore, GameWinner } from "./store";
 
 // This hook defines the winner of the game, updates the score and returns the winner as a string
 export const useDefineWinner = ():string => {
@@ -15,34 +15,34 @@ export const useDefineWinner = ():string => {
     useEffect(() => {
         const defineWinner = () => {
             if (playerChoice === "rock" && computerChoice === "scissors") {
-                setWinner("player");
+                setWinner(GameWinner.Player);
                 increasePlayerScore();
             }
 
             if (playerChoice === "rock" && computerChoice === "paper") {
-                setWinner("computer");
+                setWinner(GameWinner.Computer);
             }
 
             if (playerChoice === "paper" && computerChoice === "rock") {
-                setWinner("player");
+                setWinner(GameWinner.Player);
                 increasePlayerScore();
             }
 
             if (playerChoice === "paper" && computerChoice === "scissors") {
-                setWinner("computer");
+                setWinner(GameWinner.Computer);
             }
 
             if (playerChoice === "scissors" && computerChoice === "paper") {
-                setWinner("player");
+                setWinner(GameWinner.Player);
                 increasePlayerScore();
             }
 
             if (playerChoice === "scissors" && computerChoice === "rock") {
-                setWinner("computer");
+                setWinner(GameWinner.Computer);
             }
 
             if (playerChoice === computerChoice) {
-                setWinner("draw");
+                setWinner(GameWinner.Draw);
             }
         };
         defineWinner();

@@ -13,13 +13,19 @@ export enum GameChoice {
     null = "",
 }
 
+export enum GameWinner {
+    Player = "player",
+    Computer = "computer",
+    Draw = "draw",
+}
+
 export interface GameState {
     currentGameStep: GameStep;
     playerScore: number;
     computerScore: number;
     playerChoice: GameChoice;
     computerChoice: GameChoice;
-    winner: string;
+    winner: GameWinner;
     setCurrentGameStep: (
         state: GameStep
     ) => void;
@@ -28,7 +34,7 @@ export interface GameState {
     increaseComputerScore: () => void;
     setPlayerChoice: (choice: GameChoice) => void;
     setComputerChoice: (choice: GameChoice) => void;
-    setWinner: (winner: string) => void;
+    setWinner: (winner: GameWinner) => void;
 }
 
 // Create a store for storing the rock paper scissors game state
@@ -38,12 +44,12 @@ export const useGameStore = create<GameState>((set) => ({
     computerScore: 0,
     playerChoice: GameChoice.null,
     computerChoice: GameChoice.null,
-    winner: "",
+    winner: GameWinner.Draw,
     setCurrentGameStep: (state) => set({ currentGameStep: state }),
     increasePlayerScore: () => set((state) => ({ playerScore: state.playerScore + 1 })),
     setPlayerScore: (score: number) => set({ playerScore: score }),
     increaseComputerScore: () => set((state) => ({ computerScore: state.computerScore + 1 })),
     setPlayerChoice: (choice:GameChoice) => set({ playerChoice: choice }),
     setComputerChoice: (choice:GameChoice) => set({ computerChoice: choice }),
-    setWinner: (winner) => set({ winner: winner }),
+    setWinner: (winner:GameWinner) => set({ winner: winner }),
 }));
