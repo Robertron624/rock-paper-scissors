@@ -16,8 +16,6 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,11 +29,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Github repo](https://github.com/Robertron624/rock-paper-scissors)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -56,40 +54,38 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+With this project I really stepped up my programming logic and state management to recreate a simple game of rock paper and scissors. I also improved my TypeScript skills by typing almost of the constants and functions. I also learned how to use custom fonts in Tailwind CSS.
 
-To see how you can add code snippets, see below:
+This is the function I used to return the option component depending on the choice of the user.
+```ts
+import { Rock, Paper, Scissors } from "./components/options/Options";
+import { GameChoice } from "./store";
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+export const returnOption = (choice: GameChoice): JSX.Element => {
+    switch (choice) {
+        case "rock":
+        return <Rock />;
+        case "paper":
+        return <Paper />;
+        case "scissors":
+        return <Scissors />;
+        default:
+        return <></>;
+    }
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+For this project I want to develop the lizard, spock variation of the game.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I want to keep developing more advanced projects with TypeScript (is indiispesable to be type safe and autocomplete) and React (Also maybe another frameworks like Svelte or Vue). I also want to learn more about state management and how to use it in more complex projects, still using zustand or Redux.
+I'm planning to learn more about backend development and databases, so I can create fullstack applications.
 
 ### Useful resources
 
 - [How to use custom fonts in Tailwind CSS](https://blog.logrocket.com/how-to-use-custom-fonts-tailwind-css/) - Article for quiclky adding custom fonts to Tailwind CSS projects.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Union Types vs. Enums in TypeScript](https://javascript.plainenglish.io/union-types-vs-enums-in-typescript-a43c2c01c5fa) - Great article for understanding the difference between union types and enums in TypeScript and when to use one over the other.
 
 ## Author
 
