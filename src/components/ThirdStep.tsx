@@ -39,7 +39,7 @@ const ThirdStep = () => {
                     </h1>
                     <button
                         onClick={handlePlayAgain}
-                        className="mt-10 font-semibold text-sm rounded-md w-44 py-2 text-score bg-white"
+                        className="hover:text-white hover:bg-paper-end duration-300 transition mt-10 font-semibold text-sm rounded-md w-44 py-2 text-score bg-white"
                     >
                         PLAY AGAIN
                     </button>

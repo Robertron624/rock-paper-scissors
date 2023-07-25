@@ -48,7 +48,7 @@ const RulesModal = ({
                     <span className="sr-only">
                         close
                     </span>
-                    <img src="/icon-close.svg" alt="close" />
+                    <img src="/icon-close.svg" alt="cross icon modal header" />
                 </button>
                 </div>
                 <div className="modal-body flex justify-center">
@@ -58,12 +58,7 @@ const RulesModal = ({
                     <span className="sr-only">
                         close
                     </span>
-                    <img src="/icon-close.svg" alt="close" />
-                </button>
-            </div>
-            <div className="modal-backdrop">
-                <button>
-                    close
+                    <img src="/icon-close.svg" alt="cross icon modal footer" />
                 </button>
             </div>
         </dialog>

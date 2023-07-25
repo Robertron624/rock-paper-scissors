@@ -33,7 +33,11 @@ export default {
       },
       fontFamily: {
         barlowSemiCondensed: ["Barlow Semi Condensed", "sans-serif"],
-    },
+      },
+      transitionDuration: {
+        '0': '0ms',
+        '2000': '2000ms',
+      },
   },
 },
   plugins: [

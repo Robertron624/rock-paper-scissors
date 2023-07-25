@@ -47,7 +47,7 @@ function App() {
                 <h1 className="sr-only">
                     Rock Paper Scissors
                 </h1>
-                <div className="playground mb-28">
+                <div className={`playground ${currentGameStep=='user-pick' ? 'mb-16': 'mb-28'}`}>
                     
                     {currentGameStep === 'user-pick' && <FirstStep />}
 
@@ -58,7 +58,7 @@ function App() {
                 </div>
                 <button
                     onClick={handleRulesModal}
-                    className="md:float-right rounded-md px-8 py-1 text-white border-2 border-white"
+                    className="hover:text-score transition-all duration-300 hover:bg-white md:float-right rounded-md px-8 py-1 text-white border-2 border-white"
                 >
                     RULES
                 </button>
